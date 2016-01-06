@@ -9,6 +9,16 @@ class Block {
     //SAFELY alters the xPos variable
     xPos = newX;
   }
+
+  public void setYPos(int newY) {
+    yPos = newY;
+  }
+
+  public void setPosition(int x, int y) {
+    setXPos(x);
+    setYPos(y);
+  }
+  
   public void blockTest() {
     System.out.println(
       "I AM A BLOCK AT " + xPos + "!");
