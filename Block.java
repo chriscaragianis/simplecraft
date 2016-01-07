@@ -18,9 +18,11 @@ class Block {
     setXPos(x);
     setYPos(y);
   }
-  
-  public void blockTest() {
-    System.out.println(
-      "I AM A BLOCK AT " + xPos + "!");
+
+  public String toString() {
+    double durabilityPercent = durability * 100;
+    String line1 = "Block at (" + xPos + ", " + yPos + ")\n";
+    String line2 = "Durability: " + durabilityPercent + "%\n";
+    return line1 + line2;
   }
 }
