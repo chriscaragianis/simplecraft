@@ -28,6 +28,12 @@ class Client {
   //    (this dot operator says 'hey myClient, go ahead and
   //     run your addToBlockList method')
   public void addToBlockList(Block block) {
+    for (Block oldBlock : blockList) {
+      if (block.getXPos() == oldBlock.getXPos() && block.getYPos() == oldBlock.getYPos()) {
+        System.out.println("Attempted to place block in occupied location");
+        return;
+      }
+    }
     blockList.add(block);
   }
 

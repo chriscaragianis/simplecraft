@@ -16,15 +16,17 @@ class GameRunner {
     //Create two new Block objects by calling a
     //no-argument constructor
     Block block1 = new Block();
-    Block block2  = new Block();
+    Block block2 = new Block(3,4);
+    Block block3 = new Block(3,4);
 
     //"Hey myClient, take this block1 object and
     // run 'addToBlockList' on it!"
     myClient.addToBlockList(block1);
     myClient.addToBlockList(block2);
-
+    myClient.addToBlockList(block3);
     //"Hey myClient, go ahead and run your printBlockList
     // method!"
     myClient.printBlockList();
+    System.out.println(block1.getBlockCount());
   }
 }

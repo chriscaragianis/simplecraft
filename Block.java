@@ -14,13 +14,37 @@ class Block {
     xPos = newX;
   }
 
+  public int getXPos() {
+    return xPos;
+  }
+
   public void setYPos(int newY) {
     yPos = newY;
+  }
+
+  public int getYPos() {
+    return yPos;
   }
 
   public void setPosition(int x, int y) {
     setXPos(x);
     setYPos(y);
+  }
+
+  public int getBlockCount() {
+   return blockCount;
+  }
+
+  public Block() {
+    durability = 1;
+    blockCount++;
+  }
+
+  public Block(int x, int y) {
+    durability = 1;
+    blockCount++;
+    xPos = x;
+    yPos = y;
   }
 
   //This toString method *overrides* the toString method
